@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/", name="wild-series_index")
+     * @Route("/", name="Default_index")
      */
     public function index(): Response
     {
@@ -19,4 +19,3 @@ class DefaultController extends AbstractController
         ]);
     }
 }
-

@@ -1,3 +1,25 @@
+@import "~bootstrap/scss/bootstrap";
+
+$primary: #EFC018;
+$seconde: #000000;
+
 body {
-    background-color: red;
+    background-color: $primary;
+    font-family: 400px 16/20px 'Calistoga', sans-serif;
 }
+
+nav {
+    background-color: black;
+    color: white;
+}
+
+h1{
+    color: $seconde;
+    font-family: 400px 16/20px 'Open Sans Condensed', sans-serif;
+}
+
+/*
+font-family: 'Calistoga', cursive;
+
+font-family: 'Open Sans Condensed', sans-serif;
+*/
