@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 
+use App\Entity\Program;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,14 +11,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/", name="Default_index")
+     * @Route("/",name="app_index")
+     * @return Response A response instance
      */
-    public function index(): Response
+
+    public function index():Response
     {
-        return $this->render('wild-series/index.html.twig',
-            [
-                'website' => 'Wild Series',
-            ]);
+        return $this->render('home.html.twig', ['website' => 'Bienvenue sur notre site']);
     }
 
 }

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ category }}{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>Liste des 3 dernières séries de la catégories {{ category }}</h1>
+    {% for program in programs %}
+        <img src="{{ program.poster }}"  width="300px">
+            <h2>Série : {{ program.id }} {{ program.title }}</h2>
+            <p>{{ program.summary }}</p>
+      {% endfor %}
+    </div>
+
+<a href="{{ path('lesSeries') }}">
+    Retour à l'accueil
+</a>
+{% endblock %}
