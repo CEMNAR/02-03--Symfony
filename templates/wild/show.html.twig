@@ -1,10 +1,11 @@
+
 {% extends 'base.html.twig' %}
+
 {% block title %}{{ slug }}{% endblock %}
 
 {% block body %}
-
     <div class="media">
-        <img class="align-self-start mr-3" src="{{program.poster}}" alt="{{ program.title }} poster">
+        <a><img class="align-self-start mr-3" src="{{program.poster}}" alt="{{ program.title }} poster"></a>
         <div class="media-body">
             <h1 class="mt-0">{{ program.title }}</h1>
             <p>{{ program.summary }}</p>
@@ -12,8 +13,5 @@
         </div>
     </div>
 
-    <a href="{{ path('lesSeries') }}">
-        Retour à l'accueil
-    </a>
-
+    <a href="{{ path('wild_index') }}">Retour à l'accueil</a>
 {% endblock %}

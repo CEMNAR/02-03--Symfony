@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="media">
+        <div class="media-body">
+            <h3 class="mt-0">Série : {{ program.title }} </h3>
+            <img class="align-self-start mr-3" src="{{ program.poster }}">
+            <p>Résumer : {{ program.summary }}</p>
+        </div>
+        <div class="media-body">
+            <strong>Saison : </strong><a href="{{ path('show_season', { id: season.id }) }}">Voir le détail de la
+                saison </a><br>
+            <strong>Programme : </strong><a href="{{ path('show_program', { programName: program.title | lower | replace({" " : "-" }) }) }}">Voir le détail du
+                programme </a>
+        </div>
+    </div>
+{% endblock %}
