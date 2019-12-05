@@ -9,11 +9,16 @@
             <p><strong>Categorie :</strong> {{ program.category.name }}</p>
             <ul>
                 {% for season in seasons %}
-                    <li><strong>Saison :</strong><a href="{{ path('show_season', {id: season.number}) }}"> {{ season.number }} </a></li>
+                    <li><strong>Saison :</strong><a href="{{ path('show_season', {id: season.id}) }}"> {{ season.number }} </a></li>
                     <li><strong>Année :</strong> {{ season.year }}</li>
                     <li><strong>Description :</strong> {{ season.description }}</li><br>
                 {% endfor %}
+                <a href="{{ path('lesSeries') }}">
+                    Retour à l'accueil
+                </a>
             </ul>
         </div>
     </div>
+
+
 {% endblock %}

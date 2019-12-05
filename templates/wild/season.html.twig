@@ -3,11 +3,16 @@
 {% block body %}
 
     <h3>Saison {{ season.number }} de {{ program.title }}</h3>
+    <p>{{ program.summary }}</p>
     <p>{{ season.year }}</p>
     <br>
     <ul>
         {% for episode in episode %}
-            <li><strong><a href="{{ path('show_episode', {"id" :episode.id})}}">Episode {{ episode.id }} :</a></strong> {{ episode.title }}</li>
+            <li><strong><a href="{{ path('show_episode', {"id" :episode.id})}}">Episode {{ episode.number }} :</a></strong> {{ episode.title }}</li>
         {% endfor %}
     </ul>
+
+    <a href="{{ path('lesSeries') }}">
+        Retourner aux séries
+    </a>
 {% endblock %}
