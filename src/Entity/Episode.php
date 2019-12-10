@@ -31,11 +31,6 @@ class Episode
      */
     private $number;
 
-    /**
-     * @ORM\Column(type="text")
-     */
-    private $synopsis;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -77,15 +72,4 @@ class Episode
         return $this;
     }
 
-    public function getSynopsis(): ?string
-    {
-        return $this->synopsis;
-    }
-
-    public function setSynopsis(string $synopsis): self
-    {
-        $this->synopsis = $synopsis;
-
-        return $this;
-    }
 }
